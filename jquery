@@ -1,0 +1,16 @@
+jQuery.getScript("https://api.map.baidu.com/getscript?v=2.0&ak=zIjpLuNsU6XGcI7WWwaUoszZbqEB1VTm&s=1&services=", 
+                    function(){ 
+                                geolocation = new BMap.Geolocation(); 
+                                geolocation.getCurrentPosition(function (position) { 
+                                        
+                                alert(position.point.lat); 
+                                        
+                                }, 
+                                function (error) 
+                                { 
+                                        
+                                        alert("error"); 
+                                        
+                                } 
+                                ); 
+                        });
